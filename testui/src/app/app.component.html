@@ -1,0 +1,22 @@
+<div class="app-container">
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1 class="app-name">Paycell SDK Client Sample</h1>
+  </mat-toolbar>
+  <mat-sidenav-container class="example-sidenav-container">
+    <mat-sidenav #sidenav mode="side">
+      <mat-nav-list>
+        <a mat-list-item routerLink="">Payment</a>
+        <a mat-list-item routerLink="query">Query</a>
+        <a mat-list-item routerLink="summaryReconciliation">Summary Reconciliation</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div id="contentContainer">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

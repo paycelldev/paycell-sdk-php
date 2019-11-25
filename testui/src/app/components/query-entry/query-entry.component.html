@@ -1,0 +1,6 @@
+<form [formGroup]="form" (ngSubmit)="query()">
+  <mat-form-field>
+    <input matInput type="text" placeholder="Reference Number" formControlName="paymentReferenceNumber" />
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid">Query</button>
+</form>

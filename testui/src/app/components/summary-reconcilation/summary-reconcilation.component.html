@@ -1,0 +1,116 @@
+<div id="summaryReconciliationContainer">
+  <form id="requestContainer" [formGroup]="form" (ngSubmit)="checkSummaryReconciliation()">
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="reconciliationDate" formControlName="reconciliationDate">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" formControlName="totalPostAuthAmount" placeholder="totalPostAuthAmount" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" formControlName="totalPostAuthCount" placeholder="totalPostAuthCount" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" formControlName="totalPostAuthReverseAmount"
+             placeholder="totalPostAuthReverseAmount" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" formControlName="totalPostAuthReverseCount"
+             placeholder="totalPostAuthReverseCount" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" formControlName="totalPreAuthAmount" placeholder="totalPreAuthAmount" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" formControlName="totalPreAuthCount" placeholder="totalPreAuthCount" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" formControlName="totalPreAuthReverseAmount"
+             placeholder="totalPreAuthReverseAmount" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" formControlName="totalPreAuthReverseCount" placeholder="totalPreAuthReverseCount" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" formControlName="totalRefundAmount" placeholder="totalRefundAmount" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" formControlName="totalRefundCount" placeholder="totalRefundCount" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" formControlName="totalReverseAmount" placeholder="totalReverseAmount" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" formControlName="totalReverseCount" placeholder="totalReverseCount" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" formControlName="totalSaleAmount" placeholder="totalSaleAmount" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" formControlName="totalSaleCount" placeholder="totalSaleCount" />
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid">Check Summary
+      Reconciliation</button>
+  </form>
+  <div id="responseContainer" *ngIf="response">
+    <mat-form-field>
+      <input matNativeControl disabled type="text" placeholder="reconciliationResult"
+             [ngModel]="response.reconciliationResult" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matNativeControl disabled type="text" placeholder="totalPostAuthAmount"
+             [ngModel]="response.totalPostAuthAmount" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matNativeControl disabled type="text" placeholder="totalPostAuthCount"
+             [ngModel]="response.totalPostAuthCount" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matNativeControl disabled type="text" placeholder="totalPostAuthReverseAmount"
+             [ngModel]="response.totalPostAuthReverseAmount" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matNativeControl disabled type="text" placeholder="totalPostAuthReverseCount"
+             [ngModel]="response.totalPostAuthReverseCount" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matNativeControl disabled type="text" placeholder="totalPreAuthAmount"
+             [ngModel]="response.totalPreAuthAmount" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matNativeControl disabled type="text" placeholder="totalPreAuthCount"
+             [ngModel]="response.totalPreAuthCount" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matNativeControl disabled type="text" placeholder="totalPreAuthReverseAmount"
+             [ngModel]="response.totalPreAuthReverseAmount" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matNativeControl disabled type="text" placeholder="totalPreAuthReverseCount"
+             [ngModel]="response.totalPreAuthReverseCount" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matNativeControl disabled type="text" placeholder="totalRefundAmount"
+             [ngModel]="response.totalRefundAmount" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matNativeControl disabled type="text" placeholder="totalRefundCount"
+             [ngModel]="response.totalRefundCount" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matNativeControl disabled type="text" placeholder="totalReverseAmount"
+             [ngModel]="response.totalReverseAmount" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matNativeControl disabled type="text" placeholder="totalReverseCount"
+             [ngModel]="response.totalReverseCount" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matNativeControl disabled type="text" placeholder="totalSaleAmount" [ngModel]="response.totalSaleAmount" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matNativeControl disabled type="text" placeholder="totalSaleCount" [ngModel]="response.totalSaleCount" />
+    </mat-form-field>
+  </div>
+</div>

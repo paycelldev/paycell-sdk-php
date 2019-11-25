@@ -1,0 +1,26 @@
+<form [formGroup]="installmentPlanForm" (ngSubmit)="addInstallmentPlan()">
+  <mat-form-field>
+    <mat-select placeholder="Payment Method Type" formControlName="paymentMethodType">
+      <mat-option value="CREDIT_CARD">Credit Card</mat-option>
+      <mat-option value="DCB">Mobile</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field *ngIf="isCreditCard()">
+    <mat-select placeholder="Card Brand" formControlName="cardBrand">
+      <mat-option value="BONUS">BONUS</mat-option>
+      <mat-option value="WORLD">WORLD</mat-option>
+      <mat-option value="CARDFINANS">CARDFINANS</mat-option>
+      <mat-option value="AXESS">AXESS</mat-option>
+      <mat-option value="ADVANTAGE">ADVANTAGE</mat-option>
+      <mat-option value="PARAF">PARAF</mat-option>
+      <mat-option value="MAXIMUM">MAXIMUM</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Count" type="number" formControlName="count" />
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Amount" type="number" formControlName="amount" />
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit"> OK </button>
+</form>
