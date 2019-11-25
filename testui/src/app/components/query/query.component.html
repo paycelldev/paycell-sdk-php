@@ -1,0 +1,83 @@
+<div>
+  <mat-form-field>
+    <input disabled matNativeControl type="text" placeholder="status" [(ngModel)]="queryStatu.status" />
+  </mat-form-field>
+  <mat-form-field>
+    <input disabled matNativeControl type="text" placeholder="statusExplanation"
+      [(ngModel)]="queryStatu.statusExplanation" />
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <input disabled matNativeControl type="text" placeholder="paymentReferenceNumber"
+      [(ngModel)]="queryStatu.paymentReferenceNumber" />
+  </mat-form-field>
+  <mat-form-field>
+    <input disabled matNativeControl type="text" placeholder="msisdn" [(ngModel)]="queryStatu.msisdn" />
+  </mat-form-field>
+  <mat-form-field>
+    <input disabled matNativeControl type="text" placeholder="amount" [(ngModel)]="queryStatu.amount" />
+  </mat-form-field>
+  <mat-form-field>
+    <input disabled matNativeControl type="text" placeholder="currency" [(ngModel)]="queryStatu.currency" />
+  </mat-form-field>
+  <mat-form-field>
+    <input disabled matNativeControl type="text" placeholder="installmentCount"
+      [(ngModel)]="queryStatu.installmentCount" />
+  </mat-form-field>
+  <mat-form-field>
+    <input disabled matNativeControl type="text" placeholder="paymentMethod" [(ngModel)]="queryStatu.paymentMethod" />
+  </mat-form-field>
+  <mat-form-field>
+    <input disabled matNativeControl type="text" placeholder="paymentSecurity"
+      [(ngModel)]="queryStatu.paymentSecurity" />
+  </mat-form-field>
+  <mat-form-field>
+    <input disabled matNativeControl type="text" placeholder="paymentDate" [(ngModel)]="queryStatu.paymentDate" />
+  </mat-form-field>
+  <mat-form-field>
+    <input disabled matNativeControl type="text" placeholder="reconcilationDate"
+      [(ngModel)]="queryStatu.reconcilationDate" />
+  </mat-form-field>
+  <mat-form-field>
+    <input disabled matNativeControl type="text" placeholder="merchantId" [(ngModel)]="queryStatu.merchantId" />
+  </mat-form-field>
+  <mat-form-field>
+    <input disabled matNativeControl type="text" placeholder="terminalId" [(ngModel)]="queryStatu.terminalId" />
+  </mat-form-field>
+  <mat-form-field>
+    <input disabled matNativeControl type="text" placeholder="orderId" [(ngModel)]="queryStatu.orderId" />
+  </mat-form-field>
+  <mat-form-field>
+    <input disabled matNativeControl type="text" placeholder="acquirerbankCode"
+      [(ngModel)]="queryStatu.acquirerbankCode" />
+  </mat-form-field>
+  <mat-form-field>
+    <input disabled matNativeControl type="text" placeholder="issuerBankCode" [(ngModel)]="queryStatu.issuerBankCode" />
+  </mat-form-field>
+  <mat-form-field>
+    <input disabled matNativeControl type="text" placeholder="approvalCode" [(ngModel)]="queryStatu.approvalCode" />
+  </mat-form-field>
+</div>
+<div>
+  <table>
+    <tr>
+      <td colspan="2">
+        <button mat-raised-button color="primary" type="button" (click)="reverse()">Reverse</button>
+      </td>
+    </tr>
+  </table>
+  <form [formGroup]="refundForm">
+    <table>
+      <tr>
+        <td>
+          <mat-form-field class="full-width">
+            <input matInput type="number" formControlName="amount" placeholder="amount" />
+          </mat-form-field>
+        </td>
+        <td>
+          <button mat-raised-button color="primary" type="button" (click)="refund"
+            [disabled]="!refundForm.valid">Refund</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>

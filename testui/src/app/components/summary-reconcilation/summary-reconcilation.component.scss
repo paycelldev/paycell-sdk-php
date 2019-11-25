@@ -1,0 +1,16 @@
+#summaryReconciliationContainer {
+  display: flex;
+  justify-content: left;
+}
+
+#requestContainer, #responseContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 600px;
+}
+
+mat-form-field, button {
+  width: 300px;
+  
+}
