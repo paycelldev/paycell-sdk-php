@@ -6,4 +6,5 @@ class TestConstants {
 	public static $secureCode = '12345';
 	public static $terminalCode = '12345';
 	public static $referenceNumberPrefix = '001';
+	
 }
